@@ -28,6 +28,7 @@ jobs:
           - platform: windows-latest
             args: ''
     runs-on: ${{ matrix.platform }}
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,8 +58,10 @@ jobs:
       - name: Install Linux dependencies
         if: startsWith(matrix.platform, 'ubuntu')
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
+          sudo apt-get update -o Acquire::Retries=3
+          sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get install -y \
+            -o Dpkg::Options::="--force-confdef" \
+            -o Dpkg::Options::="--force-confold" \
             libwebkit2gtk-4.1-dev \
             build-essential \
             curl \
