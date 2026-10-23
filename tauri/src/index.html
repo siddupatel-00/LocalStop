@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocalStop</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header class="titlebar">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="6" rx="2" />
+          <rect x="3" y="14" width="18" height="6" rx="2" />
+          <circle cx="7" cy="7" r="1" fill="currentColor" stroke="none" />
+          <circle cx="7" cy="17" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        <h1>LocalStop</h1>
+      </div>
+      <div class="header-actions">
+        <button id="refresh" class="round" type="button" title="Refresh" aria-label="Refresh">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+            <polyline points="21 3 21 9 15 9" />
+          </svg>
+        </button>
+        <button id="quit" class="round" type="button" title="Quit" aria-label="Quit">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="Search..." aria-label="Search servers" autocomplete="off" spellcheck="false" />
+      <button id="sort" class="sort" type="button" title="Change sorting" aria-label="Change sorting">
+        <span id="sort-label">Sort: Port</span>
+      </button>
+    </div>
+
+    <main id="list" class="list"></main>
+
+    <div id="empty" class="empty" hidden>
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="13" height="9" rx="2" />
+          <rect x="8" y="8" width="13" height="9" rx="2" />
+          <rect x="5" y="14" width="13" height="7" rx="2" />
+        </svg>
+      </div>
+      <p id="empty-text">No local servers running</p>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+  </div>
+</body>
+</html>

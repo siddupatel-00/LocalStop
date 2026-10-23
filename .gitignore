@@ -1,0 +1,21 @@
+.build/
+.swiftpm/
+LocalStop.app/
+.DS_Store
+
+# Tauri / Node
+node_modules/
+tauri/src-tauri/target/
+tauri/src-tauri/gen/
+tauri/dist/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# Editors
+.idea/
+.vscode/
