@@ -256,17 +256,20 @@ h1 {
 }
 
 .shot {
-  width: min(100%, 380px);
+  width: min(100%, 780px);
   margin: 64px auto 0;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 3px;
-  background: var(--soft);
+  border-radius: 12px;
+  background: #000;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
 }
 
+.shot video,
 .shot img {
+  display: block;
   width: 100%;
+  height: auto;
 }
 
 .shot-dark {
