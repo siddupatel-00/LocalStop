@@ -17,7 +17,7 @@
   var stopping = new Set(), el = {};
 
   function cacheDom() {
-    ['refresh', 'quit', 'search', 'sort', 'list', 'empty', 'toast'].forEach(function (id) {
+    ['refresh', 'quit', 'close', 'search', 'sort', 'list', 'empty', 'toast'].forEach(function (id) {
       el[id] = document.getElementById(id);
     });
     el.sortLabel = document.getElementById('sort-label');
@@ -318,6 +318,9 @@
     el.refresh.addEventListener('click', handleRefresh);
     el.quit.addEventListener('click', function () {
       invoke('quit_app').catch(function (err) { showToast(errorMessage(err), true); });
+    });
+    el.close.addEventListener('click', function () {
+      invoke('hide_window').catch(function () {});
     });
     el.sort.addEventListener('click', cycleSort);
     el.search.addEventListener('input', handleSearchInput);
