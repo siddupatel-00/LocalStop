@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LocalStop — localhost, under control</title>
+  <meta name="description" content="A small menu-bar app that lists localhost servers and lets you stop, rename, or open them in one click. macOS, Windows, and Linux." />
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="./">
+      <img src="assets/icon.png" alt="" width="24" height="24" />
+      <span>LocalStop</span>
+    </a>
+    <nav>
+      <a href="https://github.com/siddupatel-00/LocalStop">GitHub</a>
+      <a href="https://github.com/siddupatel-00/LocalStop/releases/tag/v0.1.0">v0.1.0</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Menu-bar &amp; tray utility · macOS / Windows / Linux</p>
+        <h1>Localhost,<br />under control.</h1>
+        <p class="lede">See the local servers running on your machine. Stop, rename, or open one in a click.</p>
+        <p class="meta">v0.1.0 · MIT · Tauri + Rust · 6.1 MB download</p>
+      </div>
+      <figure class="shot">
+        <img src="assets/popover.png" width="380" height="440" alt="LocalStop popover showing local servers with rename, open, and stop buttons" />
+      </figure>
+    </section>
+
+    <section class="downloads" id="download">
+      <div class="section-head">
+        <h2>Download</h2>
+        <p>Pick your platform. Direct downloads, no account.</p>
+      </div>
+
+      <div class="download-grid">
+        <a class="dl" href="https://github.com/siddupatel-00/LocalStop/releases/download/v0.1.0/LocalStop_0.1.0_universal.dmg">
+          <span class="dl-os">macOS</span>
+          <span class="dl-file">Universal .dmg</span>
+          <span class="dl-size">6.1 MB</span>
+          <span class="dl-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl" href="https://github.com/siddupatel-00/LocalStop/releases/download/v0.1.0/LocalStop_0.1.0_x64-setup.exe">
+          <span class="dl-os">Windows</span>
+          <span class="dl-file">x64 installer .exe</span>
+          <span class="dl-size">2.0 MB</span>
+          <span class="dl-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl" href="https://github.com/siddupatel-00/LocalStop/releases/download/v0.1.0/LocalStop_0.1.0_x64_en-US.msi">
+          <span class="dl-os">Windows</span>
+          <span class="dl-file">x64 MSI package</span>
+          <span class="dl-size">3.0 MB</span>
+          <span class="dl-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl" href="https://github.com/siddupatel-00/LocalStop/releases/download/v0.1.0/LocalStop_0.1.0_amd64.AppImage">
+          <span class="dl-os">Linux</span>
+          <span class="dl-file">x64 AppImage</span>
+          <span class="dl-size">78.3 MB</span>
+          <span class="dl-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl" href="https://github.com/siddupatel-00/LocalStop/releases/download/v0.1.0/LocalStop_0.1.0_amd64.deb">
+          <span class="dl-os">Linux</span>
+          <span class="dl-file">x64 Debian .deb</span>
+          <span class="dl-size">3.1 MB</span>
+          <span class="dl-arrow" aria-hidden="true">↓</span>
+        </a>
+        <a class="dl dl-all" href="https://github.com/siddupatel-00/LocalStop/releases/tag/v0.1.0">
+          <span class="dl-os">All releases</span>
+          <span class="dl-file">All platforms and versions</span>
+          <span class="dl-size">GitHub</span>
+          <span class="dl-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <p class="note">Builds are unsigned. On macOS, right-click LocalStop and choose Open the first time. On Windows, SmartScreen may ask for confirmation. Linux builds target glibc 2.39 (Ubuntu 24.04+).</p>
+    </section>
+
+    <section class="features">
+      <article>
+        <span class="num">01</span>
+        <h3>See</h3>
+        <p>Lists every TCP port listening for your user, with process name and PID. System helpers are filtered out.</p>
+      </article>
+      <article>
+        <span class="num">02</span>
+        <h3>Stop</h3>
+        <p>Sends SIGTERM, waits, then escalates to SIGKILL. On Windows it ends the process tree with taskkill.</p>
+      </article>
+      <article>
+        <span class="num">03</span>
+        <h3>Name</h3>
+        <p>Rename any port once and the label persists. Search by port, command, PID, or your own name.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>LocalStop</span>
+    <span>
+      <a href="https://github.com/siddupatel-00/LocalStop">Source</a>
+      <a href="https://github.com/siddupatel-00/LocalStop/releases/tag/v0.1.0">Releases</a>
+      <a href="https://github.com/siddupatel-00/LocalStop/blob/main/LICENSE">MIT</a>
+    </span>
+  </footer>
+</body>
+</html>
