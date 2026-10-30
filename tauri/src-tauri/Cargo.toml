@@ -1,6 +1,6 @@
 [package]
 name = "localstop"
-version = "0.1.0"
+version = "0.1.1"
 description = "List and stop localhost dev servers"
 authors = ["LocalStop"]
 edition = "2021"
